@@ -1,0 +1,52 @@
+{
+    "interactionModel":{
+        "languageModel":{
+            "invocationName":"movie lookup",
+            "types":[],
+            "intents":[
+                {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+                },
+                {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+                },
+                {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+                },
+                {
+                    "name":"MovieIntent",
+                    "slots":[
+                        {
+                            "name":"title",
+                            "type":"AMAZON.Movie"
+                        }
+                    ],
+                    "samples":[
+                            "look up {title}",
+                            "get info about {title}",
+                            "{title}",
+                            "how about {title}",
+                            "info about {title}",
+                            "I'd like info about {title}"
+                    ]
+                },
+                {
+                    "name":"GetNumberFactIntent",
+                    "slots":[
+                        {
+                            "name":"theNumber",
+                            "type":"AMAZON.NUMBER"
+                        }
+                    ],
+                    "samples":[
+                            "for a fact about {theNumber}"
+                    ]
+                }
+
+            ]
+        }
+    }
+}
