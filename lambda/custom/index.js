@@ -25,7 +25,8 @@ var getMovie = function (title) {
 
 var handlers = {
     'LaunchRequest': function () {
-        this.emit('SayHello');
+        this.response.speak("Welcome to movie lookup. What movie would you like me to lookup?").listen();
+        this.emit(':responseReady');
     },
     'MovieIntent': function() {
         const title = this.event.request.intent.slots.title.value;
@@ -42,7 +43,7 @@ var handlers = {
             console.log(theMovie);
             console.log(speechOutput);
             this.response.cardRenderer(SKILL_NAME, theMovie.Title);
-            this.response.speak(speechOutput + " Would you like info about another movie?").listen("Would you like another movie?");
+            this.response.speak(speechOutput + " Would you like me to lookup another movie?").listen("Would you like another movie?");
             this.emit(':responseReady');
         });
 

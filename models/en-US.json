@@ -32,20 +32,7 @@
                             "info about {title}",
                             "I'd like info about {title}"
                     ]
-                },
-                {
-                    "name":"GetNumberFactIntent",
-                    "slots":[
-                        {
-                            "name":"theNumber",
-                            "type":"AMAZON.NUMBER"
-                        }
-                    ],
-                    "samples":[
-                            "for a fact about {theNumber}"
-                    ]
                 }
-
             ]
         }
     }
